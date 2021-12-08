@@ -3,37 +3,37 @@ import Category from "./components/Category.js"
 import { categoryData } from "./categoryData"
 
 export const App = () => {
-    const [categories, setCategories] = useState(categoryData)}
-
-    const handleCategory = (name) => {
-        const newCategory = categories.map((category) => {
-            if(category.name === name) {
-                const selected = !category.selected
-                return {...category, selected}
-            
+    const [categories, setCategories] = useState(categoryData)    
+    
+        const newCatergory = categories.map((category) => {
+            if (dev.name === name) {    
             }
-            return question
-        
-        })
-        setCategories(newQuestions)
+            return Category
+            }
+            setCategories(newCatergory)
+        }
 
-
-    return (
+        return (
         <>
-            <h1>Open Trivia Game</h1>
+            <h1>Trivia Game</h1>
             <h2>Select a Category</h2>
-            {categories.map((category, index, handleCategory) => (
-                <Category
-                id={category.id}
-                name={category.name}
-                key={index}
-                handleCategory={handleCategory}
-                />
+                <>
+                    {categories.map((category, index) => (
+                        <Category
+                            id={category.id}
+                            name={category.name}
+                            key={index}
+                            selected={category.selected}
+                            question={category.question}
+                            answer={category.answer}    
 
+                        />
+                </>
+            
             ))}
         </>
     )
 }
-    
+
 export {App as default}
 
