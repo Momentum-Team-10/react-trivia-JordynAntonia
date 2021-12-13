@@ -3,12 +3,14 @@ export const categoryData = [
         id: '9',
         name: ['General Knowledge'],
         selected: false,
+        
     },
 
     {
         id: '10',
         name: 'Entertainment: Books',
         selected: false,
+        
 
     },
 
